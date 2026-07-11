@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Cine AQP</title>
+        <link rel="stylesheet" href="styles.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Compra nuestros combos en la dulcería">
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <img src="imagenes/logo.png" alt="Logo">
+            </div>
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            <nav id="navPrincipal">
+                <a href="01 index.html">Inicio</a>
+                <a href="02 cartelera.html">Cartelera</a>
+                <a href="03 estrenos.html">Próximos Estrenos</a>
+                <a href="04 reservas.html">Reservas</a>
+                <a href="05 dulceria.html">Dulcería</a>
+                <a href="06 promociones.html">Promociones</a>
+                <a href="07 salas.html">Nuestras Salas</a>
+                <a href="08 club.html">Club CineAQP</a>
+                <a href="09 comunidad.html">Comunidad</a>
+                <a href="10 blog.html">Blog</a>
+                <a href="11 trabaja.html">Trabaja con Nosotros</a>
+                <a href="12 nosotros.html">Sobre Nosotros</a>
+                <a href="13 faq.html">Preguntas Frecuentes</a>
+                <a href="14 contacto.html">Contacto</a>
+            </nav>
+        </header>
+    <marquee class="marquee">
+        🍿 Combos exclusivos 🎟 Beneficios Club Cine AQP 🔥 Promociones disponibles
+    </marquee>
+    <h1 id="dulceria">DULCERÍA</h1>
+    <section class="formulario-contenedor" style="max-width:700px;">
+        <h3 style="text-align:center;">Consulta rápida de precios</h3>
+        <center>
+            <button type="button" class="boton" onclick="mostrarDulceria()">
+                Ver Lista de Precios
+            </button>
+            <button type="button" class="boton" onclick="buscarProducto()">
+                Buscar Producto
+            </button>
+        </center>
+        <h3 style="text-align:center; margin-top:20px;">Gestión de productos (Administrador)</h3>
+        <center>
+            <button type="button" class="boton-secundario" onclick="insertarProducto()">➕ Agregar producto</button>
+            <button type="button" class="boton-secundario" onclick="editarProducto()">✏️ Editar producto</button>
+            <button type="button" class="boton-secundario" onclick="eliminarProducto()">🗑️ Eliminar producto</button>
+            <button type="button" class="boton-secundario" onclick="ordenarProductosPorNombre()">🔤 Ordenar por Nombre</button>
+            <button type="button" class="boton-secundario" onclick="ordenarProductosPorPrecio()">💰 Ordenar por Precio</button>
+        </center>
+        <p id="resultado" style="margin-top:15px;"></p>
+    </section>
+    <section class="contenedor-banners">
+        <div class="tarjeta-banner">
+            <img src="imagenes/combo1.jpg" style="height:300px; object-fit: cover">
+            <div class="tarjeta-banner-info">
+                <h3>Combo Clásico</h3>
+                <p class="precio">S/20</p>
+                <p>
+                    1 cancha mediana + 1 gaseosa mediana.
+                </p>
+                <label>Sabor de Canchita</label>
+                <br><br>
+                <select style="width:100%; padding:10px; background:#111; color:white; border-radius:5px;">
+                    <option>Salada</option>
+                    <option>Dulce</option>
+                    <option>Mixta</option>
+                </select>
+                <br><br>
+                <label>Gaseosa</label>
+                <br><br>
+                <select style="width:100%; padding:10px; background:#111; color:white; border-radius:5px;">
+                    <option>Coca Cola</option>
+                    <option>Coca Cola Zero</option>
+                    <option>Inka Cola</option>
+                    <option>Inka Cola Zero</option>
+                    <option>Fanta</option>
+                    <option>Sprite</option>
+                </select>
+                <br><br>
+                <a href="04 reservas.html" class="boton-secundario">
+                    Agregar a Reserva
+                </a>
+            </div>
+        </div>
+        <div class="tarjeta-banner">
+            <img src="imagenes/combo2.jpg" style="height:300px; object-fit: cover">
+            <div class="tarjeta-banner-info">
+                <h3>Combo Dúo</h3>
+                <p class="precio">S/36</p>
+                <p>
+                    2 canchas medianas + 2 gaseosas medianas.
+                </p>
+                <label>Sabor de Canchita</label>
+                <br><br>
+                <select style="width:100%; padding:10px; background:#111; color:white; border-radius:5px;">
+                    <option>Salada</option>
+                    <option>Dulce</option>
+                    <option>Mixta</option>
+                </select>
+                <br><br>
+                <label>Gaseosa</label>
+                <br><br>
+                <select style="width:100%; padding:10px; background:#111; color:white; border-radius:5px;">
+                    <option>Coca Cola</option>
+                    <option>Coca Cola Zero</option>
+                    <option>Inka Cola</option>
+                    <option>Inka Cola Zero</option>
+                    <option>Fanta</option>
+                    <option>Sprite</option>
+                </select>
+                <br><br>
+                <a href="04 reservas.html" class="boton-secundario">
+                    Agregar a Reserva
+                </a>
+            </div>
+        </div>
+    </section>
+    <h2>COMBOS SOCIO</h2>
+    <section class="contenedor-banners">
+        <div class="tarjeta-banner">
+            <img src="imagenes/club1.jpg" style="height:250px; object-fit: cover">
+            <div class="tarjeta-banner-info">
+                <h3>Combo Nivel Silver</h3>
+                <p class="precio">S/24</p>
+                <p>
+                    1 cancha mediana recargable + 1 bebida + 1 snack.
+                </p>
+                <label>Snack</label>
+                <br><br>
+                <select style="width:100%; padding:10px; background:#111; color:white; border-radius:5px;">
+                    <option>Vizzio</option>
+                    <option>Hot Dog</option>
+                    <option>Nachos con Queso</option>
+                </select>
+                <br><br>
+                <label>Sabor de Canchita</label>
+                <br><br>
+                <select style="width:100%; padding:10px; background:#111; color:white; border-radius:5px;">
+                    <option>Salada</option>
+                    <option>Dulce</option>
+                    <option>Mixta</option>
+                </select>
+                <br><br>
+                <label>Gaseosa</label>
+                <br><br>
+                <select style="width:100%; padding:10px; background:#111; color:white; border-radius:5px;">
+                    <option>Coca Cola</option>
+                    <option>Coca Cola Zero</option>
+                    <option>Inka Cola</option>
+                    <option>Inka Cola Zero</option>
+                    <option>Fanta</option>
+                    <option>Sprite</option>
+                </select>
+                <br><br>
+                <p class="detalle">
+                    Snack y sabor de bebida sujeto a stock / canchita recargable del mismo sabor.
+                </p>
+                <a href="08 club.html" class="boton">
+                    Unirse al Club
+                </a>
+            </div>
+        </div>
+        <div class="tarjeta-banner">
+            <img src="imagenes/club2.jpg" style="height:250px; object-fit: cover">
+            <div class="tarjeta-banner-info">
+                <h3>Combo Nivel Gold</h3>
+                <p class="precio">S/28</p>
+                <p>
+                    1 cancha grande recargable + 2 bebidas grandes.
+                </p>
+                <label>Sabor de Canchita</label>
+                <br><br>
+                <select style="width:100%; padding:10px; background:#111; color:white; border-radius:5px;">
+                    <option>Salada</option>
+                    <option>Dulce</option>
+                    <option>Mixta</option>
+                </select>
+                <br><br>
+                <label>Gaseosa</label>
+                <br><br>
+                <select style="width:100%; padding:10px; background:#111; color:white; border-radius:5px;">
+                    <option>Coca Cola</option>
+                    <option>Coca Cola Zero</option>
+                    <option>Inka Cola</option>
+                    <option>Inka Cola Zero</option>
+                    <option>Fanta</option>
+                    <option>Sprite</option>
+                </select>
+                <br><br>
+                <p class="detalle">
+                    Sabor de bebida sujeto a stock / canchita recargable del mismo sabor.
+                </p>
+                <a href="08 club.html" class="boton">
+                    Unirse al Club
+                </a>
+            </div>
+        </div>
+        <div class="tarjeta-banner">
+            <img src="imagenes/club3.jpg" style="height:250px; object-fit: cover">
+            <div class="tarjeta-banner-info">
+                <h3>Combo Nivel Prestige</h3>
+                <p class="precio">S/32</p>
+                <p>
+                    1 cancha grande recargable + 2 bebidas + 1 snack.
+                </p>
+                <label>Snack</label>
+                <br><br>
+                <select style="width:100%; padding:10px; background:#111; color:white; border-radius:5px;">
+                    <option>Vizzio</option>
+                    <option>Hot Dog</option>
+                    <option>Nachos con Queso</option>
+                </select>
+                <br><br>
+                <label>Sabor de Canchita</label>
+                <br><br>
+                <select style="width:100%; padding:10px; background:#111; color:white; border-radius:5px;">
+                    <option>Salada</option>
+                    <option>Dulce</option>
+                    <option>Mixta</option>
+                </select>
+                <br><br>
+                <label>Gaseosa</label>
+                <br><br>
+                <select style="width:100%; padding:10px; background:#111; color:white; border-radius:5px;">
+                    <option>Coca Cola</option>
+                    <option>Coca Cola Zero</option>
+                    <option>Inka Cola</option>
+                    <option>Inka Cola Zero</option>
+                    <option>Fanta</option>
+                    <option>Sprite</option>
+                </select>
+                <br><br>
+                <p class="detalle">
+                    Snack y sabor de bebida sujeto a stock / canchita recargable del mismo sabor.
+                </p>
+                <a href="08 club.html" class="boton">
+                    Unirse al Club
+                </a>
+            </div>
+        </div>
+    </section>
+    <h2 id="snacks">SNACKS</h2>
+    <section class="grid-3-columnas">
+        <div class="tarjeta-poster">
+            <img src="imagenes/vizzio.png" style="height:300px; object-fit:contain;">
+            <h3>Vizzio</h3>
+            <p class="precio">S/6</p>
+            <a href="04 reservas.html" class="boton-secundario">
+                Agregar a Reserva
+            </a>
+        </div>
+        <div class="tarjeta-poster">
+            <img src="imagenes/hotdog.png" style="height:300px; object-fit:contain;">
+            <h3>Hot Dog</h3>
+            <p class="precio">S/10</p>
+            <a href="04 reservas.html" class="boton-secundario">
+                Agregar a Reserva
+            </a>
+        </div>
+        <div class="tarjeta-poster">
+            <img src="imagenes/nachos.png" style="height:300px; object-fit:contain;">
+            <h3>Nachos con Queso</h3>
+            <p class="precio">S/10</p>
+            <a href="04 reservas.html" class="boton-secundario">
+                Agregar a Reserva
+            </a>
+        </div>
+    </section>
+    <aside class="sidebar">
+        <h3>MENÚ</h3>
+        <nav class="enlaces-sidebar">
+            <a href="#dulceria">🍿 Dulcería</a>
+            <a href="#snacks">🌭 Snacks</a>
+        </nav>
+    </aside>
+    <section class="formulario-contenedor" style="max-width:800px; text-align:center;">
+        <h2>PROMOCIONES DE LA SEMANA</h2>
+        <p>
+            Descubre descuentos especiales, vasos coleccionables y promociones exclusivas.
+        </p>
+        <a href="06 promociones.html" class="boton">
+            Ver Promociones
+        </a>
+    </section>
+    <footer>
+        <div class="footer-redes">
+            <a href="https://facebook.com" target="_blank">
+                <img src="imagenes/facebook.png">
+            </a>
+            <a href="https://instagram.com" target="_blank">
+                <img src="imagenes/instagram.png">
+            </a>
+            <a href="https://tiktok.com" target="_blank">
+                <img src="imagenes/tiktok.png">
+            </a>
+        </div>
+        <p>Cine AQP - Arequipa, Perú</p>
+        <p>© 2026 Todos los derechos reservados</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

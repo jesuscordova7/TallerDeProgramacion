@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Cine AQP</title>
+        <link rel="stylesheet" href="styles.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Califica y conversa sobre las películas">
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <img src="imagenes/logo.png" alt="Logo">
+            </div>
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            <nav id="navPrincipal">
+                <a href="01 index.html">Inicio</a>
+                <a href="02 cartelera.html">Cartelera</a>
+                <a href="03 estrenos.html">Próximos Estrenos</a>
+                <a href="04 reservas.html">Reservas</a>
+                <a href="05 dulceria.html">Dulcería</a>
+                <a href="06 promociones.html">Promociones</a>
+                <a href="07 salas.html">Nuestras Salas</a>
+                <a href="08 club.html">Club CineAQP</a>
+                <a href="09 comunidad.html">Comunidad</a>
+                <a href="10 blog.html">Blog</a>
+                <a href="11 trabaja.html">Trabaja con Nosotros</a>
+                <a href="12 nosotros.html">Sobre Nosotros</a>
+                <a href="13 faq.html">Preguntas Frecuentes</a>
+                <a href="14 contacto.html">Contacto</a>
+            </nav>
+        </header>
+    <marquee class="marquee">
+        🗳 Vota por tu película favorita 💬 Lee lo que opina la comunidad 🏆 Top del mes
+    </marquee>
+    <h1>COMUNIDAD CINE AQP</h1>
+    <p style="text-align:center; max-width:600px; margin:0 auto 30px;">
+        La opinión de nuestros espectadores es lo que más valoramos.
+        Vota, comenta y descubre qué está viendo el resto de Arequipa.
+    </p>
+    <h2>ENCUESTA: ¿CUÁL ES TU PELÍCULA FAVORITA?</h2>
+    <form class="formulario-contenedor">
+        <label>Elige tu película favorita del mes</label>
+        <select required>
+            <option>Moana</option>
+            <option>Evil Dead en llamas</option>
+            <option>Minions y Monstruos</option>
+            <option>Supergirl</option>
+            <option>Toy Story 5</option>
+        </select>
+        <label>¿Qué calificación le darías? (1 al 5)</label>
+        <select id="calificacionVoto" required>
+            <option value="5">5 - Excelente</option>
+            <option value="4">4 - Muy buena</option>
+            <option value="3">3 - Buena</option>
+            <option value="2">2 - Regular</option>
+            <option value="1">1 - Mala</option>
+        </select>
+        <button type="button" class="boton" onclick="enviarVoto()" style="width:100%;">Votar</button>
+    </form>
+    <h2>COMENTARIOS DE CLIENTES</h2>
+    <section class="contenedor-banners">
+        <div class="tarjeta-banner">
+            <div class="tarjeta-banner-info">
+                <h3>María F. ⭐⭐⭐⭐⭐</h3>
+                <p>
+                    "La sala VIP de Cine AQP es espectacular, el sonido se
+                    siente increíble. Toy Story 5 me sacó lágrimas."
+                </p>
+            </div>
+        </div>
+        <div class="tarjeta-banner">
+            <div class="tarjeta-banner-info">
+                <h3>Jorge P. ⭐⭐⭐⭐</h3>
+                <p>
+                    "Excelente atención en dulcería, los combos del club
+                    valen totalmente la pena."
+                </p>
+            </div>
+        </div>
+        <div class="tarjeta-banner">
+            <div class="tarjeta-banner-info">
+                <h3>Camila R. ⭐⭐⭐⭐⭐</h3>
+                <p>
+                    "Fui a ver Minions un miércoles con la promo 2x1,
+                    ¡la mejor experiencia de cine en Arequipa!"
+                </p>
+            </div>
+        </div>
+    </section>
+    <h2>TOP 3 PELÍCULAS MEJOR VALORADAS DE JUNIO</h2>
+    <section class="grid-3-columnas">
+        <div class="tarjeta-poster">
+            <img src="imagenes/ts5.jpg" style="height:470px; object-fit: cover">
+            <h3>🥇 Toy Story 5</h3>
+            <p>⭐ 4.3 / 5</p>
+        </div>
+        <div class="tarjeta-poster">
+            <img src="imagenes/obsesion.jpg" style="height:470px; object-fit: cover">
+            <h3>🥈 Obsesion</h3>
+            <p>⭐ 4.2 / 5</p>
+        </div>
+        <div class="tarjeta-poster">
+            <img src="imagenes/minions.jpg" style="height:470px; object-fit: cover">
+            <h3>🥉 Minions y Monstruos</h3>
+            <p>⭐ 4.0 / 5</p>
+        </div>
+    </section>
+    <section class="formulario-contenedor" style="max-width:700px; text-align:center;">
+        <h2>PROMEDIO DE LA COMUNIDAD</h2>
+        <p>
+            Consulta el promedio general de votos que ha dejado la comunidad
+            este mes.
+        </p>
+        <button type="button" class="boton" onclick="promedioPeliculas()">
+            Ver Promedio de Votos
+        </button>
+    </section>
+    <footer>
+        <div class="footer-redes">
+            <a href="https://facebook.com" target="_blank"><img src="imagenes/facebook.png"></a>
+            <a href="https://instagram.com" target="_blank"><img src="imagenes/instagram.png"></a>
+            <a href="https://tiktok.com" target="_blank"><img src="imagenes/tiktok.png"></a>
+        </div>
+        <p>Cine AQP - Arequipa, Perú</p>
+        <p>© 2026 Todos los derechos reservados</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
