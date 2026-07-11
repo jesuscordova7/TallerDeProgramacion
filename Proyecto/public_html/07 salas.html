@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Cine AQP</title>
+        <link rel="stylesheet" href="styles.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Informate sobre nuestras salas disponibles">
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <img src="imagenes/logo.png" alt="Logo">
+            </div>
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            <nav id="navPrincipal">
+                <a href="01 index.html">Inicio</a>
+                <a href="02 cartelera.html">Cartelera</a>
+                <a href="03 estrenos.html">Próximos Estrenos</a>
+                <a href="04 reservas.html">Reservas</a>
+                <a href="05 dulceria.html">Dulcería</a>
+                <a href="06 promociones.html">Promociones</a>
+                <a href="07 salas.html">Nuestras Salas</a>
+                <a href="08 club.html">Club CineAQP</a>
+                <a href="09 comunidad.html">Comunidad</a>
+                <a href="10 blog.html">Blog</a>
+                <a href="11 trabaja.html">Trabaja con Nosotros</a>
+                <a href="12 nosotros.html">Sobre Nosotros</a>
+                <a href="13 faq.html">Preguntas Frecuentes</a>
+                <a href="14 contacto.html">Contacto</a>
+            </nav>
+        </header>
+    <marquee class="marquee">
+        🎬 Tecnología de punta en cada sala 🔊 Sonido envolvente 🍿 Vive el cine como nunca antes
+    </marquee>
+    <h1>NUESTRAS SALAS</h1>
+    <p style="text-align:center; max-width:700px; margin:0 auto 30px;">
+        En Cine AQP contamos con distintos formatos de sala para que elijas
+        la experiencia que más se ajuste a lo que buscas, desde funciones
+        clásicas hasta la máxima inmersión.
+    </p>
+    <section class="grid-3-columnas">
+        <div class="tarjeta-poster">
+            <img src="imagenes/sala-vip.jpg" alt="Sala VIP" style="height:280px; object-fit: cover">
+            <h3>Sala VIP</h3>
+            <p><strong>Capacidad:</strong> 50 personas</p>
+            <p><strong>Sonido:</strong> Dolby Atmos</p>
+            <p><strong>Proyección:</strong> 2D / 3D Full HD</p>
+            <p>
+                Butacas reclinables de cuero, servicio a la butaca y
+                ambiente exclusivo para una experiencia premium.
+            </p>
+        </div>
+        <div class="tarjeta-poster">
+            <img src="imagenes/sala-3d.jpg" alt="Sala 3D" style="height:280px; object-fit: cover">
+            <h3>Sala 3D</h3>
+            <p><strong>Capacidad:</strong> 120 personas</p>
+            <p><strong>Sonido:</strong> Dolby Digital 7.1</p>
+            <p><strong>Proyección:</strong> 3D Digital</p>
+            <p>
+                Lentes 3D incluidos y proyección de alta definición para
+                una inmersión total en cada escena.
+            </p>
+        </div>
+        <div class="tarjeta-poster">
+            <img src="imagenes/sala-premium.jpg" alt="Sala Premium" style="height:280px; object-fit: cover">
+            <h3>Sala Premium</h3>
+            <p><strong>Capacidad:</strong> 90 personas</p>
+            <p><strong>Sonido:</strong> Dolby Surround</p>
+            <p><strong>Proyección:</strong> 2D Láser</p>
+            <p>
+                Pantalla curva de gran formato con proyección láser de
+                última generación y butacas amplias.
+            </p>
+        </div>
+    </section>
+    <section class="video-destacado">
+        <h2>SALA IMAX</h2>
+        <video id="video" src="videos/sala-imax.mp4" controls loop muted autoplay></video>
+        <button type="button" class="boton" onclick="pantallaCompleta()" style="display:block; margin:15px auto;">
+            Ver en Pantalla Completa
+        </button>
+        <p style="text-align:center; margin-top:15px;">
+            <strong>Capacidad:</strong> 180 personas &nbsp;|&nbsp;
+            <strong>Sonido:</strong> IMAX Signature &nbsp;|&nbsp;
+            <strong>Proyección:</strong> IMAX Digital 4K
+        </p>
+        <p style="text-align:center;">
+            Nuestra sala insignia: pantalla gigante de pared a pared y
+            sonido envolvente diseñado para la máxima inmersión.
+        </p>
+    </section>
+    <h2>EVENTOS PRIVADOS Y ALQUILER DE SALA</h2>
+    <section class="contenedor-banners">
+        <div class="tarjeta-banner">
+            <img src="imagenes/evento-cumpleanos.jpg" style="height:220px; object-fit: cover">
+            <div class="tarjeta-banner-info">
+                <h3>Cumpleaños y Celebraciones</h3>
+                <p>
+                    Reserva una sala completa para tu cumpleaños o
+                    reunión familiar, con la película que elijas y
+                    combos personalizados.
+                </p>
+                <a href="14 contacto.html" class="boton">
+                    Cotizar Evento
+                </a>
+            </div>
+        </div>
+        <div class="tarjeta-banner">
+            <img src="imagenes/evento-empresas.jpg" style="height:220px; object-fit: cover">
+            <div class="tarjeta-banner-info">
+                <h3>Eventos Corporativos</h3>
+                <p>
+                    Ideal para presentaciones, capacitaciones o
+                    actividades de integración empresarial en un
+                    ambiente distinto a la oficina.
+                </p>
+                <a href="14 contacto.html" class="boton">
+                    Cotizar Evento
+                </a>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-redes">
+            <a href="https://facebook.com" target="_blank"><img src="imagenes/facebook.png"></a>
+            <a href="https://instagram.com" target="_blank"><img src="imagenes/instagram.png"></a>
+            <a href="https://tiktok.com" target="_blank"><img src="imagenes/tiktok.png"></a>
+        </div>
+        <p>Cine AQP - Arequipa, Perú</p>
+        <p>© 2026 Todos los derechos reservados</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

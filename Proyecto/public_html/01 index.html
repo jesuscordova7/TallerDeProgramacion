@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Cine AQP</title>
+        <link rel="stylesheet" href="styles.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Inicio de la página de CineAQP">
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <img src="imagenes/logo.png" alt="Logo">
+            </div>
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            <nav id="navPrincipal">
+                <a href="01 index.html">Inicio</a>
+                <a href="02 cartelera.html">Cartelera</a>
+                <a href="03 estrenos.html">Próximos Estrenos</a>
+                <a href="04 reservas.html">Reservas</a>
+                <a href="05 dulceria.html">Dulcería</a>
+                <a href="06 promociones.html">Promociones</a>
+                <a href="07 salas.html">Nuestras Salas</a>
+                <a href="08 club.html">Club CineAQP</a>
+                <a href="09 comunidad.html">Comunidad</a>
+                <a href="10 blog.html">Blog</a>
+                <a href="11 trabaja.html">Trabaja con Nosotros</a>
+                <a href="12 nosotros.html">Sobre Nosotros</a>
+                <a href="13 faq.html">Preguntas Frecuentes</a>
+                <a href="14 contacto.html">Contacto</a>
+            </nav>
+        </header>
+        <section class="banner">
+            <a href="02 cartelera.html">
+                <img src="imagenes/banner.jpg" alt="Banner Principal">
+            </a>
+        </section>
+        <h2>PELÍCULAS DESTACADAS</h2>
+        <section class="grid-3-columnas">
+            <div class="tarjeta-poster">
+                <img src="imagenes/moana.jpg" alt="Moana" style="height:550px; object-fit: cover">
+                <h3>Moana</h3>
+                <a href="04 reservas.html" class="boton-secundario">Comprar Entradas</a>
+            </div>
+            <div class="tarjeta-poster">
+                <img src="imagenes/minions.jpg" alt="Minions y Monstruos" style="height:550px; object-fit: cover">
+                <h3>Minions y Monstruos</h3>
+                <a href="04 reservas.html" class="boton-secundario">Comprar Entradas</a>
+            </div>
+            <div class="tarjeta-poster">
+                <img src="imagenes/supergirl.jpg" alt="Supergirl" style="height:550px; object-fit: cover">
+                <h3>Supergirl</h3>
+                <a href="04 reservas.html" class="boton-secundario">Comprar Entradas</a>
+            </div>
+        </section>
+        <h2>TRAILER DESTACADO</h2>
+        <section class="video-destacado">
+            <video id="video" src="videos/trailer.mp4" controls loop muted autoplay></video>
+            <button type="button" class="boton" onclick="pantallaCompleta()" style="display:block; margin:15px auto;">
+                Ver en Pantalla Completa
+            </button>
+        </section>
+        <h2>PROMOCIONES DESTACADAS</h2>
+        <section class="grid-3-columnas">
+            <div class="tarjeta-poster" style="height:auto;">
+                <h3>Miércoles 2x1</h3>
+                <p>Disfruta de nuestra promoción de mitad de semana en todas las películas.</p>
+                <a href="06 promociones.html" class="boton-secundario">Ver Promociones</a>
+            </div>
+            <div class="tarjeta-poster" style="height:auto;">
+                <h3>Vasos Coleccionables</h3>
+                <p>Consigue vasos exclusivos por el estreno de nuevas películas.</p>
+                <a href="06 promociones.html" class="boton-secundario">Ver Promociones</a>
+            </div>
+            <div class="tarjeta-poster" style="height:auto;">
+                <h3>Tickets Conmemorativos</h3>
+                <p>Lleva tickets especiales en estrenos seleccionados.</p>
+                <a href="06 promociones.html" class="boton-secundario">Ver Promociones</a>
+            </div>
+        </section>
+        <section class="formulario-contenedor" style="max-width:800px; text-align:center;">
+            <h2>Compra tus entradas ahora y vive la experiencia Cine AQP</h2>
+            <a href="04 reservas.html" class="boton">RESERVAR AHORA</a>
+        </section>
+        <footer>
+            <div class="footer-redes">
+                <a href="https://facebook.com" target="_blank"><img src="imagenes/facebook.png" alt="Facebook"></a>
+                <a href="https://instagram.com" target="_blank"><img src="imagenes/instagram.png" alt="Instagram"></a>
+                <a href="https://tiktok.com" target="_blank"><img src="imagenes/tiktok.png" alt="TikTok"></a>
+            </div>
+            <p>Cine AQP - Arequipa, Perú</p>
+            <p>© 2026 Todos los derechos reservados</p>
+        </footer>
+        <script src="script.js"></script>
+    </body>
+</html>
