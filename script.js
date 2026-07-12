@@ -292,7 +292,7 @@ function cerrarVentanaReserva()
 function confirmarReserva()
 {
     alert("¡Reserva confirmada! Te esperamos en Cine AQP.");
-    window.location.href = "01 index.html";
+    window.location.href = "index.html";
 }
 function volverAtras()
 {
